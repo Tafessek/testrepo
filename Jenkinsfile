@@ -1,7 +1,7 @@
 
 node('linux') {
         stage('Setup') {
-                git git credentialsId: 'gitcredential', url: 'https://github.com/Tafessek/testrepo.git'
+                git credentialsId: 'gitcredential', url: 'https://github.com/Tafessek/testrepo.git'
                 sh 'echo git is connected'
         }
         stage('Build') {
