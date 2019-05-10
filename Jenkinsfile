@@ -5,10 +5,10 @@ node('linux') {
                 sh 'echo git is connected'
         }
         stage('Build') {
-                sh 'docker build -t hello-world:1.0 .'
+                sh 'docker build -t web1:1.0 .'
         }
         stage('Test') {
-                sh 'docker run -d --name web2 -p 80:80 --env PHP_PORT=80 hello-world:1.0'
+                sh 'docker run -d --name web2 -p 80:80 --env PHP_PORT=80 web1:1.0'
                
         }
         stage('Remove') {
