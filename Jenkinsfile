@@ -14,6 +14,6 @@ node('linux') {
         stage('Remove') {
                 sh 'docker stop web1 || true'
                 sh 'docker rm web1 || true'
-                
+        }        
         
 }
