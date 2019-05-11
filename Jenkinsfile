@@ -10,6 +10,6 @@ node('linux') {
                 sh 'docker stop web2 || true'
                 sh 'docker rm web2 || true'
                 sh 'docker run -d --name web2 -p 80:80 --env NGINX_PORT=80 web1:1.0'
-		sh 'curl -s $(docker inspect --format="{{.NetworkSettings.IPAddress}}" web2)'     
+		     
       }               
 }
